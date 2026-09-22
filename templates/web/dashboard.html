@@ -1,0 +1,9 @@
+{% extends "web/base.html" %}
+{% block title %}Dashboard — JobPilot AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">YOUR JOB SEARCH</p><h1>Good to see you, {{ user.first_name|default:user.username }}.</h1><p>These recommendations are based only on the skills and preferences you have saved.</p></div><a class="button" href="{% url 'jobs' %}">Explore jobs</a></section>
+{% if not has_profile_skills %}<section class="callout"><strong>Set up your profile for meaningful recommendations.</strong><a href="{% url 'profile' %}">Add your skills →</a></section>{% endif %}
+<section class="stat-grid"><article><p>TRACKED JOBS</p><strong>{{ application_count }}</strong></article><article><p>INTERVIEWS</p><strong>{{ status_counts.INTERVIEW|default:0 }}</strong></article><article><p>FOLLOW-UPS DUE</p><strong>{{ follow_ups|length }}</strong></article></section>
+<section class="content-grid"><div class="section-card"><div class="section-title"><h2>Best matches</h2><a href="{% url 'jobs' %}">View all</a></div>{% for item in recommendations %}<a class="job-row" href="{% url 'job-detail' item.job.id %}"><div class="match-pill">{{ item.match.overall_match }}%</div><div><strong>{{ item.job.title }}</strong><span>{{ item.job.company }} · {{ item.job.location|default:"Flexible" }}</span></div><span class="arrow">→</span></a>{% empty %}<p class="empty">No jobs yet. Add demo jobs from the admin panel or use the seed command.</p>{% endfor %}</div>
+<div class="section-card"><div class="section-title"><h2>Follow-ups</h2><a href="{% url 'applications' %}">Manage</a></div>{% for item in follow_ups %}<div class="job-row"><div class="date-chip">{{ item.follow_up_date|date:"d M" }}</div><div><strong>{{ item.job.title }}</strong><span>{{ item.job.company }}</span></div></div>{% empty %}<p class="empty">Nothing is due today. Nice work staying organized.</p>{% endfor %}</div></section>
+{% endblock %}

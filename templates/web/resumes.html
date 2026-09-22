@@ -1,0 +1,6 @@
+{% extends "web/base.html" %}
+{% block title %}Resumes — JobPilot AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">PRIVATE RESUMES</p><h1>Your career material.</h1><p>PDF files are private to your account. Uploading extracts relevant skills for matching.</p></div></section>
+<section class="content-grid"><div class="form-card"><h2>Upload PDF</h2><form method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">Upload and parse</button></form></div><div class="section-card"><h2>Saved resumes</h2>{% for resume in resumes %}<div class="resume-row"><div><strong>{{ resume.title }}</strong><span>{% if resume.is_primary %}Primary resume{% else %}Uploaded {{ resume.uploaded_at|date:"d M Y" }}{% endif %}</span></div><span class="tag">{{ resume.parsed_data.skills|length }} skills</span></div>{% empty %}<p class="empty">No resumes uploaded yet.</p>{% endfor %}</div></section>
+{% endblock %}

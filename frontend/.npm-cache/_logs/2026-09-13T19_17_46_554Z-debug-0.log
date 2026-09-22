@@ -1,0 +1,75 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.16.0
+2 info using node@v24.18.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\RESUME PROJECTS\JobPilot AI\frontend\.npmrc
+5 silly config load:file:C:\Users\Admin\.npmrc
+6 silly config load:file:C:\Users\Admin\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".npm-cache"
+9 verbose logfile logs-max:10 dir:C:\RESUME PROJECTS\JobPilot AI\frontend\.npm-cache\_logs\2026-09-13T19_17_46_554Z-
+10 verbose logfile C:\RESUME PROJECTS\JobPilot AI\frontend\.npm-cache\_logs\2026-09-13T19_17_46_554Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@oxc-project/types': [ '0.149.0' ],
+15 silly audit   '@rolldown/binding-android-arm-eabi': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-android-arm64': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-darwin-arm64': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-darwin-x64': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-freebsd-x64': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.2.8' ],
+15 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.2.8' ],
+15 silly audit   '@rolldown/pluginutils': [ '1.0.1' ],
+15 silly audit   '@vitejs/plugin-react': [ '6.1.1' ],
+15 silly audit   'detect-libc': [ '2.1.2' ],
+15 silly audit   fdir: [ '6.5.0' ],
+15 silly audit   fsevents: [ '2.3.3' ],
+15 silly audit   lightningcss: [ '1.33.0' ],
+15 silly audit   'lightningcss-android-arm64': [ '1.33.0' ],
+15 silly audit   'lightningcss-darwin-arm64': [ '1.33.0' ],
+15 silly audit   'lightningcss-darwin-x64': [ '1.33.0' ],
+15 silly audit   'lightningcss-freebsd-x64': [ '1.33.0' ],
+15 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.33.0' ],
+15 silly audit   'lightningcss-linux-arm64-gnu': [ '1.33.0' ],
+15 silly audit   'lightningcss-linux-arm64-musl': [ '1.33.0' ],
+15 silly audit   'lightningcss-linux-x64-gnu': [ '1.33.0' ],
+15 silly audit   'lightningcss-linux-x64-musl': [ '1.33.0' ],
+15 silly audit   'lightningcss-win32-arm64-msvc': [ '1.33.0' ],
+15 silly audit   'lightningcss-win32-x64-msvc': [ '1.33.0' ],
+15 silly audit   nanoid: [ '3.3.19' ],
+15 silly audit   picocolors: [ '1.1.1' ],
+15 silly audit   picomatch: [ '4.0.7' ],
+15 silly audit   postcss: [ '8.5.28' ],
+15 silly audit   react: [ '19.3.0' ],
+15 silly audit   'react-dom': [ '19.3.0' ],
+15 silly audit   rolldown: [ '1.2.8' ],
+15 silly audit   scheduler: [ '0.28.0' ],
+15 silly audit   'source-map-js': [ '1.2.1' ],
+15 silly audit   tinyglobby: [ '0.2.17' ],
+15 silly audit   vite: [ '8.3.0' ]
+15 silly audit }
+16 http fetch GET 200 https://registry.npmjs.org/npm 454ms
+17 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 506ms
+18 silly audit report {}
+19 verbose cwd C:\RESUME PROJECTS\JobPilot AI\frontend
+20 verbose os Windows_NT 10.0.19045
+21 verbose node v24.18.0
+22 verbose npm  v11.16.0
+23 notice
+23 notice New major version of npm available! 11.16.0 -> 12.0.2
+23 notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+23 notice To update run: npm install -g npm@12.0.2
+23 notice  { force: true, Symbol(proc-log.meta): true }
+24 verbose exit 0
+25 info ok

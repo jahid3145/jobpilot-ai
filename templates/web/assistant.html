@@ -1,0 +1,6 @@
+{% extends "web/base.html" %}
+{% block title %}Assistant — JobPilot AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">CONTROLLED ASSISTANT</p><h1>Ask, then stay in control.</h1><p>The assistant uses a small set of approved tools. It cannot submit applications, send emails, or invent jobs.</p></div></section>
+<section class="assistant-layout"><div class="assistant-prompt"><h2>What can I help you with?</h2><form method="post">{% csrf_token %}<textarea name="message" placeholder="Try: Find Python Django jobs in Hyderabad">{{ message }}</textarea><button class="button" type="submit">Ask JobPilot</button></form><div class="prompt-chips"><span>Find Django jobs</span><span>Show my applications</span><span>What skills am I missing?</span></div></div>{% if result %}<div class="assistant-result"><p class="tool-name">TOOL USED · {{ result.tool }}</p>{% if result.is_list %}{% for item in result.data %}<div class="assistant-item"><strong>{{ item.title|default:item.job }}</strong><span>{{ item.company|default:item.status }} {% if item.location %}· {{ item.location }}{% endif %}</span></div>{% empty %}<p>No records were found.</p>{% endfor %}{% else %}<p>{{ result.data }}</p>{% endif %}</div>{% endif %}</section>
+{% endblock %}

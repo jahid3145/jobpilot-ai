@@ -1,0 +1,8 @@
+{% extends "web/base.html" %}
+{% block title %}Create account — JobPilot AI{% endblock %}
+{% block content %}
+<section class="auth-card"><p class="eyebrow">START HERE</p><h1>Create your workspace</h1>
+  <form method="post">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">Create account</button></form>
+  <p class="muted">Already have an account? <a href="{% url 'login' %}">Log in</a>.</p>
+</section>
+{% endblock %}

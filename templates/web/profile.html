@@ -1,0 +1,6 @@
+{% extends "web/base.html" %}
+{% block title %}Your profile — JobPilot AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">CANDIDATE PROFILE</p><h1>Tell JobPilot what you bring.</h1><p>Only information you save here is used in your job-match score.</p></div><a class="button button-ghost" href="{% url 'resumes' %}">Manage resumes</a></section>
+<section class="form-card"><form method="post">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">Save profile</button></form></section>
+{% endblock %}

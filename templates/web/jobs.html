@@ -1,0 +1,7 @@
+{% extends "web/base.html" %}
+{% block title %}Jobs — JobPilot AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">OPPORTUNITY BOARD</p><h1>Roles worth your attention.</h1><p>Each score is calculated locally from your saved profile and primary resume.</p></div></section>
+<form class="search-bar" method="get"><input name="q" value="{{ query }}" placeholder="Search title, e.g. Django developer"><input name="location" value="{{ location }}" placeholder="Location"><button class="button" type="submit">Search</button></form>
+<section class="job-grid">{% for item in jobs %}<article class="job-card"><div class="job-card-top"><div class="match-pill large">{{ item.match.overall_match }}%</div><span class="tag">{{ item.job.get_employment_type_display }}</span></div><h2>{{ item.job.title }}</h2><p class="company">{{ item.job.company }} · {{ item.job.location|default:"Flexible" }}</p><p class="description">{{ item.job.description|truncatechars:150 }}</p><div class="tag-row">{% for skill in item.match.matching_skills|slice:":3" %}<span>{{ skill }}</span>{% endfor %}</div><a class="card-link" href="{% url 'job-detail' item.job.id %}">See match details <span>→</span></a></article>{% empty %}<p class="empty">No matching jobs found. Try a different search.</p>{% endfor %}</section>
+{% endblock %}
